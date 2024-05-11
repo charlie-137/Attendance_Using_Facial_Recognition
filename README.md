@@ -6,10 +6,10 @@ By harnessing the power of facial recognition, the project enhances efficiency, 
 
 
 ## Features
-A.) **Face Registration**: In the face registration phase, we systematically register faces, enabling our system to recognize them in subsequent interactions. 
+A.) **Face Registration**: In the face registration segment, it systematically register faces, enabling the system to recognize them in subsequent interactions. 
 This process involves capturing and storing facial data, creating a comprehensive database of registered individuals.  
   
-B.) **Face Recognition**: In the face recognition segment, our system leverages the registered faces, employing advanced algorithms and machine learning models 
+B.) **Face Recognition**: In the face recognition segment, the system leverages the registered faces, employing advanced algorithms and machine learning models 
 to accurately and swiftly identify individuals. This feature plays a pivotal role in enhancing security, user experience, and operational efficiency. 
 The recognized faces are matched against the registered profiles, facilitating access control, attendance tracking, and more.  
   
