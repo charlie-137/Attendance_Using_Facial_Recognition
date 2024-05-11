@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id "org.jetbrains.kotlin.android"
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply plugin: "realm-android"
+
+android {
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.example.imageclassificationlivefeed"
+        minSdkVersion 26
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    aaptOptions {
+        noCompress "tflite"
+    }
+    namespace 'com.example.imageclassificationlivefeed'
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures{
+        viewBinding = true
+    }
+
+}
+
+realm {
+    syncEnabled = true
+}
+
+dependencies {
+
+
+    //for custom dialog
+    implementation('com.github.f0ris.sweetalert:library:1.5.6')
+
+    implementation "androidx.fragment:fragment-ktx:1.6.2"
+
+
+
+    implementation("com.google.android.material:material:1.11.0")
+
+    implementation ("com.mikhaellopez:circularimageview:4.3.1")
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //for Image cropper
+    implementation ("com.soundcloud.android:android-crop:1.0.1@aar")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+
+
+    implementation 'org.tensorflow:tensorflow-lite:+'
+    implementation 'com.google.mlkit:face-detection:16.1.6'
+
+    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'org.mongodb:mongodb-driver-reactivestreams:4.4.0'
+    implementation 'io.realm:realm-gradle-plugin:10.15.1'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+}

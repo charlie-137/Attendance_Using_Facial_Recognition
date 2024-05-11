@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_back"
+    tools:context=".UserInterface.DashboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addFaceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true">
+
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="100dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add_face" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/takeAttendanceBtn"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/empAttendanceReportBtn"
+            app:layout_constraintStart_toEndOf="@+id/addFaceBtn"
+            app:layout_constraintTop_toTopOf="@+id/addFaceBtn"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_take_attendance" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/empAttendanceReportBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/takeAttendanceBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/takeAttendanceBtn"
+            android:focusable="true">
+
+
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_employee_attendance_report" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/employeeWiseAttendanceReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/takeAttendanceBtn"
+            app:layout_constraintStart_toStartOf="@+id/takeAttendanceBtn"
+            app:layout_constraintTop_toBottomOf="@+id/takeAttendanceBtn"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_emp_wise_atten_report" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/showImageBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?android:attr/selectableItemBackground"-->
+<!--            app:cardCornerRadius="8dp"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/employeeWiseAttendanceReport"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/employeeWiseAttendanceReport"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/employeeWiseAttendanceReport">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="85dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/ic_emp_wise_atten_report" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageViewFromBB"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/img_school_logo"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/showImageBtn" />-->
+
+<!--        <TextView-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            android:id="@+id/dateAndTime"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:text="TextView"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/printDataTimeBtn"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/printDataTimeBtn"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/printDataTimeBtn" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

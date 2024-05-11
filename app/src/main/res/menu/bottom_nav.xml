@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Dashboard"
+        android:id="@+id/dashboardFrag"
+        android:icon="@drawable/baseline_dashboard_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/employeeFrag"
+        android:title="Employee"
+        android:icon="@drawable/baseline_person_24"
+        app:showAsAction="always"/>
+
+</menu>

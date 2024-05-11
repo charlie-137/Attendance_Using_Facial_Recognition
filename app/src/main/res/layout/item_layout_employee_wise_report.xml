@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="VIEW"
+        android:textSize="12.5sp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:theme="@style/MatButtonSourceCode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/dateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charlie"
+        android:textColor="@color/black"
+        android:textSize="12.5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/empAttendance"
+        app:layout_constraintStart_toEndOf="@+id/materialButton"
+        app:layout_constraintTop_toTopOf="@+id/materialButton" />
+
+    <TextView
+        android:id="@+id/empAttendance"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:layout_marginRight="12dp"
+        android:text="A"
+        android:background="@drawable/rounded_corners"
+        android:textColor="@color/black"
+        android:textSize="12.5sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dateTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dateTV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANIL KUMAR"
+        android:layout_marginVertical="13dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/dividerView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerVertical"
+        android:visibility="visible" />
+
+</LinearLayout>
