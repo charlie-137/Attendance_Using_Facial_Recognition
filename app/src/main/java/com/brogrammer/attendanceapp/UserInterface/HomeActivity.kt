@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface
+package com.brogrammer.attendanceapp.UserInterface
 
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import androidx.core.content.ContextCompat
-import com.brogrammer.imageclassificationlivefeed.R
+import com.brogrammer.attendanceapp.R
 import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : BaseActivity() {

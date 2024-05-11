@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package com.brogrammer.imageclassificationlivefeed.Drawing;
+package com.brogrammer.attendanceapp.Drawing;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -33,8 +33,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import com.brogrammer.imageclassificationlivefeed.LiveFeed.ImageUtils;
-import com.brogrammer.imageclassificationlivefeed.Face_Recognition.FaceClassifier.Recognition;
+import com.brogrammer.attendanceapp.LiveFeed.ImageUtils;
+import com.brogrammer.attendanceapp.Face_Recognition.FaceClassifier.Recognition;
 
 /** A tracker that handles non-max suppression and matches existing objects to new detections. */
 public class MultiBoxTracker {

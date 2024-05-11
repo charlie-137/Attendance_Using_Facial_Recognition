@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface
+package com.brogrammer.attendanceapp.UserInterface
 
 import android.graphics.Bitmap
 

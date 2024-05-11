@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface
+package com.brogrammer.attendanceapp.UserInterface
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,10 +8,10 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.brogrammer.imageclassificationlivefeed.BackEnd.DataManager
-import com.brogrammer.imageclassificationlivefeed.BackEnd.TimestampsCallback
-import com.brogrammer.imageclassificationlivefeed.R
-import com.brogrammer.imageclassificationlivefeed.UserInterface.LoadingDialog.CustomDialogTimeStampsReport
+import com.brogrammer.attendanceapp.BackEnd.DataManager
+import com.brogrammer.attendanceapp.BackEnd.TimestampsCallback
+import com.brogrammer.attendanceapp.R
+import com.brogrammer.attendanceapp.UserInterface.LoadingDialog.CustomDialogTimeStampsReport
 
 // The adapter acts as a bridge between the data source and the 'RecyclerView' UI Component
 

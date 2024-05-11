@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface
+package com.brogrammer.attendanceapp.UserInterface
 
 import android.content.Context
 import android.content.Intent
@@ -13,11 +13,11 @@ import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import com.brogrammer.imageclassificationlivefeed.BackEnd.B2URLAndTOKEN
-import com.brogrammer.imageclassificationlivefeed.BackEnd.DataManager
-import com.brogrammer.imageclassificationlivefeed.BackEnd.ImageDownloadCallback
-import com.brogrammer.imageclassificationlivefeed.MainActivity
-import com.brogrammer.imageclassificationlivefeed.R
+import com.brogrammer.attendanceapp.BackEnd.B2URLAndTOKEN
+import com.brogrammer.attendanceapp.BackEnd.DataManager
+import com.brogrammer.attendanceapp.BackEnd.ImageDownloadCallback
+import com.brogrammer.attendanceapp.MainActivity
+import com.brogrammer.attendanceapp.R
 //import io.realm.gradle.Realm
 import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
@@ -26,7 +26,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
-import com.brogrammer.imageclassificationlivefeed.BackEnd.UploadUrlCallback
+import com.brogrammer.attendanceapp.BackEnd.UploadUrlCallback
 
 private lateinit var app: App
 private val appId = "application-0-wnbyu"

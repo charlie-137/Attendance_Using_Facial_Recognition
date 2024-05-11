@@ -26,14 +26,14 @@
         android:layout_marginTop="35dp"
         app:cardCornerRadius="5dp">
 
-        <com.example.imageclassificationlivefeed.LiveFeed.AutoFitTextureView
+        <com.brogrammer.attendanceapp.LiveFeed.AutoFitTextureView
             android:id="@+id/texture"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.example.imageclassificationlivefeed.Drawing.OverlayView
+    <com.brogrammer.attendanceapp.Drawing.OverlayView
         android:id="@+id/tracking_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

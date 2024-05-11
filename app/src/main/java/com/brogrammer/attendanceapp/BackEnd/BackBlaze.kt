@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.BackEnd
+package com.brogrammer.attendanceapp.BackEnd
 
 private const val B2_UPLOAD_URL = "http://192.168.1.13/B2UploadURLTwo.php" // Replace with your localhost URL
 

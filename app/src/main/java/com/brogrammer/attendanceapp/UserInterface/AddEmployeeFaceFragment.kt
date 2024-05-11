@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface
+package com.brogrammer.attendanceapp.UserInterface
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,8 +13,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.brogrammer.imageclassificationlivefeed.BackEnd.DataManager
-import com.brogrammer.imageclassificationlivefeed.R
+import com.brogrammer.attendanceapp.BackEnd.DataManager
+import com.brogrammer.attendanceapp.R
 
 //private var upload_Bitmap:Bitmap?=null
 //

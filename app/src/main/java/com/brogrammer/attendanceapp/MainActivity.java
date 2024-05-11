@@ -1,9 +1,9 @@
-package com.brogrammer.imageclassificationlivefeed;
+package com.brogrammer.attendanceapp;
 
 //UsesMap
 //import static com.example.imageclassificationlivefeed.Face_Recognition.TFLiteFaceRecognition.registeredHashMap;
 
-import static com.brogrammer.imageclassificationlivefeed.BackEnd.DataManager.getRegisteredHashMap;
+import static com.brogrammer.attendanceapp.BackEnd.DataManager.getRegisteredHashMap;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,16 +54,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.brogrammer.imageclassificationlivefeed.BackEnd.DataManager;
-import com.brogrammer.imageclassificationlivefeed.Drawing.BorderedText;
-import com.brogrammer.imageclassificationlivefeed.Drawing.MultiBoxTracker;
-import com.brogrammer.imageclassificationlivefeed.Drawing.OverlayView;
-import com.brogrammer.imageclassificationlivefeed.Face_Recognition.FaceClassifier;
-import com.brogrammer.imageclassificationlivefeed.Face_Recognition.TFLiteFaceRecognition;
-import com.brogrammer.imageclassificationlivefeed.LiveFeed.CameraConnectionFragment;
-import com.brogrammer.imageclassificationlivefeed.LiveFeed.ImageUtils;
-import com.brogrammer.imageclassificationlivefeed.UserInterface.SharedViewModel;
-import com.brogrammer.imageclassificationlivefeed.Utils.Utils;
+import com.brogrammer.attendanceapp.BackEnd.DataManager;
+import com.brogrammer.attendanceapp.Drawing.BorderedText;
+import com.brogrammer.attendanceapp.Drawing.MultiBoxTracker;
+import com.brogrammer.attendanceapp.Drawing.OverlayView;
+import com.brogrammer.attendanceapp.Face_Recognition.FaceClassifier;
+import com.brogrammer.attendanceapp.Face_Recognition.TFLiteFaceRecognition;
+import com.brogrammer.attendanceapp.LiveFeed.CameraConnectionFragment;
+import com.brogrammer.attendanceapp.LiveFeed.ImageUtils;
+import com.brogrammer.attendanceapp.UserInterface.SharedViewModel;
+import com.brogrammer.attendanceapp.Utils.Utils;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.mlkit.vision.common.InputImage;

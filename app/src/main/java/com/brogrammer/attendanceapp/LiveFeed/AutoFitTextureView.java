@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.brogrammer.imageclassificationlivefeed.LiveFeed;
+package com.brogrammer.attendanceapp.LiveFeed;
 
 import android.content.Context;
 import android.util.AttributeSet;

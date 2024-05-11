@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.LiveFeed;
+package com.brogrammer.attendanceapp.LiveFeed;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -42,7 +42,7 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 
-import com.brogrammer.imageclassificationlivefeed.R;
+import com.brogrammer.attendanceapp.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

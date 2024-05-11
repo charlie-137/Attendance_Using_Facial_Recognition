@@ -1,11 +1,11 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface.adapter
+package com.brogrammer.attendanceapp.UserInterface.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.brogrammer.imageclassificationlivefeed.R
+import com.brogrammer.attendanceapp.R
 
 class TimestampAdapter(private val timestamps: List<String>) : RecyclerView.Adapter<TimestampAdapter.TimestampViewHolder>() {
 

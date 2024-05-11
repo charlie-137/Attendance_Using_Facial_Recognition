@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.Utils
+package com.brogrammer.attendanceapp.Utils
 
 import android.content.Context
 import android.widget.Toast

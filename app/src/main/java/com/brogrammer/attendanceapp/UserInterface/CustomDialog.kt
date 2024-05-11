@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface
+package com.brogrammer.attendanceapp.UserInterface
 
 import android.app.Activity
 import android.app.Dialog
@@ -14,11 +14,11 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import com.brogrammer.imageclassificationlivefeed.BackEnd.B2URLAndTOKEN
-import com.brogrammer.imageclassificationlivefeed.BackEnd.DataManager
-import com.brogrammer.imageclassificationlivefeed.MainActivity
-import com.brogrammer.imageclassificationlivefeed.R
-import com.brogrammer.imageclassificationlivefeed.UserInterface.AddEmployeeFaceFragment.Companion.REQUEST_CODE_MAIN_ACTIVITY
+import com.brogrammer.attendanceapp.BackEnd.B2URLAndTOKEN
+import com.brogrammer.attendanceapp.BackEnd.DataManager
+import com.brogrammer.attendanceapp.MainActivity
+import com.brogrammer.attendanceapp.R
+import com.brogrammer.attendanceapp.UserInterface.AddEmployeeFaceFragment.Companion.REQUEST_CODE_MAIN_ACTIVITY
 
 class CustomDialog(private val activity: Activity, private val initialEmployeeCode: String?,private val initialEmployeeName:String? ) : Dialog(activity) {
 

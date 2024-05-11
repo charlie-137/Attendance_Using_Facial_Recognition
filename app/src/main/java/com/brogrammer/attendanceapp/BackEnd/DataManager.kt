@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.BackEnd
+package com.brogrammer.attendanceapp.BackEnd
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -7,10 +7,10 @@ import android.util.Log
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.brogrammer.imageclassificationlivefeed.Face_Recognition.FaceClassifier
-import com.brogrammer.imageclassificationlivefeed.Face_Recognition.FaceClassifier.Recognition
-import com.brogrammer.imageclassificationlivefeed.UserInterface.ItemModel
-import com.brogrammer.imageclassificationlivefeed.Utils.Utils
+import com.brogrammer.attendanceapp.Face_Recognition.FaceClassifier
+import com.brogrammer.attendanceapp.Face_Recognition.FaceClassifier.Recognition
+import com.brogrammer.attendanceapp.UserInterface.ItemModel
+import com.brogrammer.attendanceapp.Utils.Utils
 import com.mongodb.MongoClientSettings
 import com.mongodb.client.model.Filters.and
 import com.mongodb.client.model.Filters.eq
@@ -62,12 +62,12 @@ object DataManager {
 
     val myItemList = ArrayList<ItemModel>()
 
-    private const val SERVER_URL = "http://192.168.1.8/FacialRecognitionCogTech.php/getAllUsersData" // Replace with your localhost URL
+    private const val SERVER_URL = "http://192.168.96.149/FacialRecognitionCogTech.php/getAllUsersData" // Replace with your localhost URL
     //    private const val WEB_HOST_URL = "https://cognitosoftech.000webhostapp.com/FacialRecognitionCogTech.php?action=getAllUsersData"
 
-    private const val B2_UPLOAD_URL = "http://192.168.1.8/B2UploadURLTwo.php" // Replace with your localhost URL
+    private const val B2_UPLOAD_URL = "http://192.168.96.149/B2UploadURLTwo.php" // Replace with your localhost URL
 
-    private const val B2_AUTH_TOKEN_URL = "http://192.168.1.8/authTokenBackBlaze.php" // Replace with your localhost URL
+    private const val B2_AUTH_TOKEN_URL = "192.168.96.149/authTokenBackBlaze.php" // Replace with your localhost URL
 
     //gets refreshed everyday
     var authenticationToken = "4_0054d843a7610950000000002_01b28433_e55be4_acct_PkHKwYS_GH0pX6BbsqusgKUOKEc="
@@ -519,10 +519,69 @@ object DataManager {
 
 
 
+
+
+
+
+fun abc(context: Context)
+{
+    val requestQueue = Volley.newRequestQueue(context)
+
+    val stringRequest = StringRequest(Request.Method.POST, SERVER_URL, { response ->
+
+        if (response == "fail") {
+            Log.e("Error", "Error in request")
+        } else {
+            var id: Int    // Stores the unique auto incremented Id for each employee
+            var employeeName: String  // Stores the name of the employee
+            var employeeCode: String  // Stores the employee code of the employee
+            var attendanceEligibility: Int // Stores whether we have to take the attendance for the particular employee
+            var employmentStatus: Int  // Stores the current employment status of the employee
+            try {
+                val jsonObject = JSONObject(response)
+                val jsonArray = jsonObject.getJSONArray("response_obj")
+                for (i in 0 until jsonArray.length()) {
+                    val jsonObject1 = jsonArray.getJSONObject(i)
+                    id = jsonObject1.optInt("id")
+                    employeeName = jsonObject1.optString("empName")
+                    employeeCode = jsonObject1.optString("empCode")
+                    attendanceEligibility = jsonObject1.optInt("attnStatus")
+                    employmentStatus = jsonObject1.optInt("employmentStatus")
+
+                    myItemList.add(
+                        ItemModel(
+                            id,
+                            employeeCode,
+                            employeeName,
+                            "A",
+                            null,
+                            employmentStatus,
+                            attendanceEligibility
+                        )
+                    )
+//                    Utils.showToast(context, "Data Fetched From Local Host")
+                }
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }, { error ->
+        Log.e("Error", "Error in request: $error")
+    })
+    requestQueue.add(stringRequest)
+    Log.d("Request", "Request added to queue")
+
+}
+
+
+
+
+
     // Fetching the all users data from the localhost database
     fun getAllUsersData(context: Context) {
         if (myItemList.size == 0) {
-            Utils.showToast(context, "Data Fetched From Local Host")
+//            Utils.showToast(context, "Data Fetched From Local Host")
 
             val requestQueue = Volley.newRequestQueue(context)
 
@@ -564,6 +623,7 @@ object DataManager {
                                 "ID: $id, Name: $employeeName, Code: $employeeCode, Status: $attendanceEligibility, Employment: $employmentStatus"
                             Log.d("ToastTextTAG", toastText)
 //                            Toast.makeText(context, employeeName, Toast.LENGTH_SHORT).show()
+//                            Utils.showToast(context, "Data Fetched From Local Host")
 
                         }
 

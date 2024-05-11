@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.UserInterface
+package com.brogrammer.attendanceapp.UserInterface
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,10 +11,10 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.brogrammer.imageclassificationlivefeed.BackEnd.DataManager
-import com.brogrammer.imageclassificationlivefeed.R
-import com.brogrammer.imageclassificationlivefeed.UserInterface.LoadingDialog.CustomDialogTimeStampsReport
-import com.brogrammer.imageclassificationlivefeed.UserInterface.LoadingDialog.LoadingDialog
+import com.brogrammer.attendanceapp.BackEnd.DataManager
+import com.brogrammer.attendanceapp.R
+import com.brogrammer.attendanceapp.UserInterface.LoadingDialog.CustomDialogTimeStampsReport
+import com.brogrammer.attendanceapp.UserInterface.LoadingDialog.LoadingDialog
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -74,7 +74,7 @@ class EmployeeFragment : Fragment() {
         // show the loading dialog
         loadingDialog.startLoading()
 
-        DataManager.attendanceReportFromMongo(currentDate, object : com.brogrammer.imageclassificationlivefeed.BackEnd.ReportCallback {
+        DataManager.attendanceReportFromMongo(currentDate, object : com.brogrammer.attendanceapp.BackEnd.ReportCallback {
             override fun onReportReady(presentCount: Int, absentCount: Int) {
                 // Update the UI on the main thread
                 activity?.runOnUiThread {

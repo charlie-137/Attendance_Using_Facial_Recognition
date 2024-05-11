@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.LiveFeed;
+package com.brogrammer.attendanceapp.LiveFeed;
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;

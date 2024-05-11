@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed
+package com.brogrammer.attendanceapp
 
 
 import android.content.ContentValues

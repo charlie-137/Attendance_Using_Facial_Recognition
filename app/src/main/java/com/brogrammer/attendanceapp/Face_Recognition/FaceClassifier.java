@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.Face_Recognition;
+package com.brogrammer.attendanceapp.Face_Recognition;
 
 import android.graphics.Bitmap;
 import android.graphics.RectF;

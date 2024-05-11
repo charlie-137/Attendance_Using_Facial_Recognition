@@ -1,4 +1,4 @@
-package com.brogrammer.imageclassificationlivefeed.BackEnd
+package com.brogrammer.attendanceapp.BackEnd
 
 object B2URLAndTOKEN {
     var uploadUrl: String? = null
